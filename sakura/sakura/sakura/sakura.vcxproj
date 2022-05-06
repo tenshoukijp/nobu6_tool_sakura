@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6D32DE3D-0A05-4F12-BF08-2DE2F94E5185}</ProjectGuid>
+    <WindowsTargetPlatformVersion>7.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release_one\</OutDir>
+    <IntDir>.\Release_one\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug_one\</OutDir>
+    <IntDir>.\Debug_one\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release_one/sakura.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>..\sakura_core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;NOMINMAX;SAKURA_NO_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release_one/sakura.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release_one/</AssemblerListingLocation>
+      <ObjectFileName>.\Release_one/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release_one/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0411</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>comctl32.lib;Imm32.lib;mpr.lib;imagehlp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\Release_one/sakura.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>.\Release_one/sakura.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release_one/sakura.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug_one/sakura.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\sakura_core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;NOMINMAX;SAKURA_NO_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug_one/sakura.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug_one/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug_one/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug_one/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0411</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>comctl32.lib;Imm32.lib;mpr.lib;imagehlp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\Debug_one/sakura.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug_one/sakura.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug_one/sakura.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\sakura_core\CAutoSave.cpp" />
+    <ClCompile Include="..\sakura_core\CBlockComment.cpp" />
+    <ClCompile Include="..\sakura_core\CBregexp.cpp" />
+    <ClCompile Include="..\sakura_core\CCommandLine.cpp" />
+    <ClCompile Include="..\sakura_core\CControlProcess.cpp" />
+    <ClCompile Include="..\sakura_core\CDialog.cpp" />
+    <ClCompile Include="..\sakura_core\CDicMgr.cpp" />
+    <ClCompile Include="..\sakura_core\CDlgAbout.cpp" />
+    <ClCompile Include="..\sakura_core\CDlgCancel.cpp" />
+    <ClCompile Include="..\sakura_core\CDlgCompare.cpp" />
+    <ClCompile Include="..\sakura_core\CDlgCtrlCode.cpp" />
+    <ClCompile Include="..\sakura_core\CDlgDebug.cpp" />
+    <ClCompile Include="..\sakura_core\CDlgDiff.cpp" />
+    <ClCompile Include="..\sakura_core\CDlgExec.cpp" />
+    <ClCompile Include="..\sakura_core\CDlgFavorite.cpp" />
+    <ClCompile Include="..\sakura_core\CDlgFileUpdateQuery.cpp" />
+    <ClCompile Include="..\sakura_core\CDlgFind.cpp" />
+    <ClCompile Include="..\sakura_core\CDlgFuncList.cpp" />
+    <ClCompile Include="..\sakura_core\CDlgGrep.cpp" />
+    <ClCompile Include="..\sakura_core\CDlgInput1.cpp" />
+    <ClCompile Include="..\sakura_core\CDlgJump.cpp" />
+    <ClCompile Include="..\sakura_core\CDlgKeywordSelect.cpp" />
+    <ClCompile Include="..\sakura_core\CDlgOpenFile.cpp" />
+    <ClCompile Include="..\sakura_core\CDlgPrintPage.cpp" />
+    <ClCompile Include="..\sakura_core\CDlgPrintSetting.cpp" />
+    <ClCompile Include="..\sakura_core\CDlgProperty.cpp" />
+    <ClCompile Include="..\sakura_core\CDlgReplace.cpp" />
+    <ClCompile Include="..\sakura_core\CDlgSameColor.cpp" />
+    <ClCompile Include="..\sakura_core\CDlgTagJumpList.cpp" />
+    <ClCompile Include="..\sakura_core\CDlgTagsMake.cpp" />
+    <ClCompile Include="..\sakura_core\CDlgTypeList.cpp" />
+    <ClCompile Include="..\sakura_core\CDlgWinSize.cpp" />
+    <ClCompile Include="..\sakura_core\CDllHandler.cpp" />
+    <ClCompile Include="..\sakura_core\CDocLine.cpp" />
+    <ClCompile Include="..\sakura_core\CDocLineMgr.cpp" />
+    <ClCompile Include="..\sakura_core\CDocLineMgr_New.cpp" />
+    <ClCompile Include="..\sakura_core\CDropTarget.cpp" />
+    <ClCompile Include="..\sakura_core\CEditApp.cpp" />
+    <ClCompile Include="..\sakura_core\CEditDoc.cpp" />
+    <ClCompile Include="..\sakura_core\CEditDoc_FuncList1.cpp" />
+    <ClCompile Include="..\sakura_core\CEditDoc_FuncList2.cpp" />
+    <ClCompile Include="..\sakura_core\CEditDoc_FuncList3.cpp" />
+    <ClCompile Include="..\sakura_core\CEditDoc_new.cpp" />
+    <ClCompile Include="..\sakura_core\CEditView.cpp" />
+    <ClCompile Include="..\sakura_core\CEditView_Cmdgrep.cpp" />
+    <ClCompile Include="..\sakura_core\CEditView_CmdHokan.cpp" />
+    <ClCompile Include="..\sakura_core\CEditView_Cmdisrch.cpp" />
+    <ClCompile Include="..\sakura_core\CEditView_Command.cpp" />
+    <ClCompile Include="..\sakura_core\CEditView_Command_New.cpp" />
+    <ClCompile Include="..\sakura_core\CEditView_Diff.cpp" />
+    <ClCompile Include="..\sakura_core\CEditView_New.cpp" />
+    <ClCompile Include="..\sakura_core\CEditView_New2.cpp" />
+    <ClCompile Include="..\sakura_core\CEditView_New3.cpp" />
+    <ClCompile Include="..\sakura_core\CEditWnd.cpp" />
+    <ClCompile Include="..\sakura_core\CEol.cpp" />
+    <ClCompile Include="..\sakura_core\CESI.cpp" />
+    <ClCompile Include="..\sakura_core\CFileExt.cpp" />
+    <ClCompile Include="..\sakura_core\CFileLoad.cpp" />
+    <ClCompile Include="..\sakura_core\CFileWrite.cpp" />
+    <ClCompile Include="..\sakura_core\CFuncInfo.cpp" />
+    <ClCompile Include="..\sakura_core\CFuncInfoArr.cpp" />
+    <ClCompile Include="..\sakura_core\CFuncKeyWnd.cpp" />
+    <ClCompile Include="..\sakura_core\CFuncLookup.cpp" />
+    <ClCompile Include="..\sakura_core\charcode.cpp" />
+    <ClCompile Include="..\sakura_core\CHokanMgr.cpp" />
+    <ClCompile Include="..\sakura_core\CHtmlHelp.cpp" />
+    <ClCompile Include="..\sakura_core\CImageListMgr.cpp" />
+    <ClCompile Include="..\sakura_core\CKeyBind.cpp" />
+    <ClCompile Include="..\sakura_core\CKeyMacroMgr.cpp" />
+    <ClCompile Include="..\sakura_core\CKeyWordSetMgr.cpp" />
+    <ClCompile Include="..\sakura_core\CLayout.cpp" />
+    <ClCompile Include="..\sakura_core\CLayoutMgr.cpp" />
+    <ClCompile Include="..\sakura_core\CLayoutMgr_New.cpp" />
+    <ClCompile Include="..\sakura_core\CLayoutMgr_New2.cpp" />
+    <ClCompile Include="..\sakura_core\CLineComment.cpp" />
+    <ClCompile Include="..\sakura_core\CMacro.cpp" />
+    <ClCompile Include="..\sakura_core\CMacroFactory.cpp" />
+    <ClCompile Include="..\sakura_core\CMacroManagerBase.cpp" />
+    <ClCompile Include="..\sakura_core\CMarkMgr.cpp" />
+    <ClCompile Include="..\sakura_core\CMemory.cpp" />
+    <ClCompile Include="..\sakura_core\CMenuDrawer.cpp" />
+    <ClCompile Include="..\sakura_core\CMigemo.cpp" />
+    <ClCompile Include="..\sakura_core\CMRU.cpp" />
+    <ClCompile Include="..\sakura_core\CMRUFolder.cpp" />
+    <ClCompile Include="..\sakura_core\CNormalProcess.cpp" />
+    <ClCompile Include="..\sakura_core\COpe.cpp" />
+    <ClCompile Include="..\sakura_core\COpeBlk.cpp" />
+    <ClCompile Include="..\sakura_core\COpeBuf.cpp" />
+    <ClCompile Include="..\sakura_core\CPPA.cpp" />
+    <ClCompile Include="..\sakura_core\CPPAMacroMgr.cpp" />
+    <ClCompile Include="..\sakura_core\CPrint.cpp" />
+    <ClCompile Include="..\sakura_core\CPrintPreview.cpp" />
+    <ClCompile Include="..\sakura_core\CProcess.cpp" />
+    <ClCompile Include="..\sakura_core\CProcessFactory.cpp" />
+    <ClCompile Include="..\sakura_core\CProfile.cpp" />
+    <ClCompile Include="..\sakura_core\CPropComBackup.cpp" />
+    <ClCompile Include="..\sakura_core\CPropComCustmenu.cpp" />
+    <ClCompile Include="..\sakura_core\CPropComEdit.cpp" />
+    <ClCompile Include="..\sakura_core\CPropComFile.cpp" />
+    <ClCompile Include="..\sakura_core\CPropComFileName.cpp" />
+    <ClCompile Include="..\sakura_core\CPropComFormat.cpp" />
+    <ClCompile Include="..\sakura_core\CPropComGrep.cpp" />
+    <ClCompile Include="..\sakura_core\CPropComHelper.cpp" />
+    <ClCompile Include="..\sakura_core\CPropComKeybind.cpp" />
+    <ClCompile Include="..\sakura_core\CPropComKeyword.cpp" />
+    <ClCompile Include="..\sakura_core\CPropComMacro.cpp" />
+    <ClCompile Include="..\sakura_core\CPropCommon.cpp" />
+    <ClCompile Include="..\sakura_core\CPropComTab.cpp" />
+    <ClCompile Include="..\sakura_core\CPropComToolbar.cpp" />
+    <ClCompile Include="..\sakura_core\CPropComWin.cpp" />
+    <ClCompile Include="..\sakura_core\CPropTypes.cpp" />
+    <ClCompile Include="..\sakura_core\CPropTypesKeyHelp.cpp" />
+    <ClCompile Include="..\sakura_core\CPropTypesRegex.cpp" />
+    <ClCompile Include="..\sakura_core\CRecent.cpp" />
+    <ClCompile Include="..\sakura_core\CRegexKeyword.cpp" />
+    <ClCompile Include="..\sakura_core\CRunningTimer.cpp" />
+    <ClCompile Include="..\sakura_core\CShareData.cpp" />
+    <ClCompile Include="..\sakura_core\CShareData_new.cpp" />
+    <ClCompile Include="..\sakura_core\CSMacroMgr.cpp" />
+    <ClCompile Include="..\sakura_core\CSortedTagJumpList.cpp" />
+    <ClCompile Include="..\sakura_core\CSplitBoxWnd.cpp" />
+    <ClCompile Include="..\sakura_core\CSplitterWnd.cpp" />
+    <ClCompile Include="..\sakura_core\CTabWnd.cpp" />
+    <ClCompile Include="..\sakura_core\CTipWnd.cpp" />
+    <ClCompile Include="..\sakura_core\CUxTheme.cpp" />
+    <ClCompile Include="..\sakura_core\CWaitCursor.cpp" />
+    <ClCompile Include="..\sakura_core\CWnd.cpp" />
+    <ClCompile Include="..\sakura_core\CWSH.cpp" />
+    <ClCompile Include="..\sakura_core\Debug.cpp" />
+    <ClCompile Include="..\sakura_core\etc_uty.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\sakura_core\Funccode.cpp" />
+    <ClCompile Include="..\sakura_core\global.cpp" />
+    <ClCompile Include="..\sakura_core\my_icmp.cpp" />
+    <ClCompile Include="..\sakura_core\MY_SP.C">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\sakura_core\StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\sakura_core\WinMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\sakura_core\sakura_rc.rc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">\usr\koei\Tenshouki95\sakura\zip\sakura.166.src\ssrc_2010-10-17\sakura_core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">\usr\koei\Tenshouki95\sakura\zip\sakura.166.src\ssrc_2010-10-17\sakura_core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\sakura_core\CAutoSave.h" />
+    <ClInclude Include="..\sakura_core\CBlockComment.h" />
+    <ClInclude Include="..\sakura_core\CBregexp.h" />
+    <ClInclude Include="..\sakura_core\CCommandLine.h" />
+    <ClInclude Include="..\sakura_core\CControlProcess.h" />
+    <ClInclude Include="..\sakura_core\CDialog.h" />
+    <ClInclude Include="..\sakura_core\CDicMgr.h" />
+    <ClInclude Include="..\sakura_core\CDlgAbout.h" />
+    <ClInclude Include="..\sakura_core\CDlgCancel.h" />
+    <ClInclude Include="..\sakura_core\CDlgCompare.h" />
+    <ClInclude Include="..\sakura_core\CDlgCtrlCode.h" />
+    <ClInclude Include="..\sakura_core\CDlgDebug.h" />
+    <ClInclude Include="..\sakura_core\CDlgDiff.h" />
+    <ClInclude Include="..\sakura_core\CDlgExec.h" />
+    <ClInclude Include="..\sakura_core\CDlgFavorite.h" />
+    <ClInclude Include="..\sakura_core\CDlgFileUpdateQuery.h" />
+    <ClInclude Include="..\sakura_core\CDlgFind.h" />
+    <ClInclude Include="..\sakura_core\CDlgFuncList.h" />
+    <ClInclude Include="..\sakura_core\CDlgGrep.h" />
+    <ClInclude Include="..\sakura_core\CDlgInput1.h" />
+    <ClInclude Include="..\sakura_core\CDlgJump.h" />
+    <ClInclude Include="..\sakura_core\CDlgKeywordSelect.h" />
+    <ClInclude Include="..\sakura_core\CDlgOpenFile.h" />
+    <ClInclude Include="..\sakura_core\CDlgPrintPage.h" />
+    <ClInclude Include="..\sakura_core\CDlgPrintSetting.h" />
+    <ClInclude Include="..\sakura_core\CDlgProperty.h" />
+    <ClInclude Include="..\sakura_core\CDlgReplace.h" />
+    <ClInclude Include="..\sakura_core\CDlgSameColor.h" />
+    <ClInclude Include="..\sakura_core\CDlgTagJumpList.h" />
+    <ClInclude Include="..\sakura_core\CDlgTagsMake.h" />
+    <ClInclude Include="..\sakura_core\CDlgTypeList.h" />
+    <ClInclude Include="..\sakura_core\CDlgWinSize.h" />
+    <ClInclude Include="..\sakura_core\CDllHandler.h" />
+    <ClInclude Include="..\sakura_core\CDocLine.h" />
+    <ClInclude Include="..\sakura_core\CDocLineMgr.h" />
+    <ClInclude Include="..\sakura_core\CDropTarget.h" />
+    <ClInclude Include="..\sakura_core\CEditApp.h" />
+    <ClInclude Include="..\sakura_core\CEditDoc.h" />
+    <ClInclude Include="..\sakura_core\CEditView.h" />
+    <ClInclude Include="..\sakura_core\CEditWnd.h" />
+    <ClInclude Include="..\sakura_core\CEol.h" />
+    <ClInclude Include="..\sakura_core\CESI.h" />
+    <ClInclude Include="..\sakura_core\CFileExt.h" />
+    <ClInclude Include="..\sakura_core\CFileLoad.h" />
+    <ClInclude Include="..\sakura_core\CFileWrite.h" />
+    <ClInclude Include="..\sakura_core\CFuncInfo.h" />
+    <ClInclude Include="..\sakura_core\CFuncInfoArr.h" />
+    <ClInclude Include="..\sakura_core\CFuncKeyWnd.h" />
+    <ClInclude Include="..\sakura_core\CFuncLookup.h" />
+    <ClInclude Include="..\sakura_core\charcode.h" />
+    <ClInclude Include="..\sakura_core\CHokanMgr.h" />
+    <ClInclude Include="..\sakura_core\CHtmlHelp.h" />
+    <ClInclude Include="..\sakura_core\CImageListMgr.h" />
+    <ClInclude Include="..\sakura_core\CKeyBind.h" />
+    <ClInclude Include="..\sakura_core\CKeyMacroMgr.h" />
+    <ClInclude Include="..\sakura_core\CKeyWordSetMgr.h" />
+    <ClInclude Include="..\sakura_core\CLayout.h" />
+    <ClInclude Include="..\sakura_core\CLayoutMgr.h" />
+    <ClInclude Include="..\sakura_core\CLineComment.h" />
+    <ClInclude Include="..\sakura_core\CMacro.h" />
+    <ClInclude Include="..\sakura_core\CMacroFactory.h" />
+    <ClInclude Include="..\sakura_core\CMacroManagerBase.h" />
+    <ClInclude Include="..\sakura_core\CMarkMgr.h" />
+    <ClInclude Include="..\sakura_core\CMemory.h" />
+    <ClInclude Include="..\sakura_core\CMemoryIterator.h" />
+    <ClInclude Include="..\sakura_core\CMenuDrawer.h" />
+    <ClInclude Include="..\sakura_core\CMigemo.h" />
+    <ClInclude Include="..\sakura_core\CMRU.h" />
+    <ClInclude Include="..\sakura_core\CMRUFolder.h" />
+    <ClInclude Include="..\sakura_core\CMutex.h" />
+    <ClInclude Include="..\sakura_core\CNormalProcess.h" />
+    <ClInclude Include="..\sakura_core\COpe.h" />
+    <ClInclude Include="..\sakura_core\COpeBlk.h" />
+    <ClInclude Include="..\sakura_core\COpeBuf.h" />
+    <ClInclude Include="..\sakura_core\COsVersionInfo.h" />
+    <ClInclude Include="..\sakura_core\CPPA.h" />
+    <ClInclude Include="..\sakura_core\CPPAMacroMgr.h" />
+    <ClInclude Include="..\sakura_core\CPrint.h" />
+    <ClInclude Include="..\sakura_core\CPrintPreview.h" />
+    <ClInclude Include="..\sakura_core\CProcess.h" />
+    <ClInclude Include="..\sakura_core\CProcessFactory.h" />
+    <ClInclude Include="..\sakura_core\CProfile.h" />
+    <ClInclude Include="..\sakura_core\CPropCommon.h" />
+    <ClInclude Include="..\sakura_core\CPropTypes.h" />
+    <ClInclude Include="..\sakura_core\CRecent.h" />
+    <ClInclude Include="..\sakura_core\CRegexKeyword.h" />
+    <ClInclude Include="..\sakura_core\CRunningTimer.h" />
+    <ClInclude Include="..\sakura_core\CShareData.h" />
+    <ClInclude Include="..\sakura_core\CSMacroMgr.h" />
+    <ClInclude Include="..\sakura_core\CSortedTagJumpList.h" />
+    <ClInclude Include="..\sakura_core\CSplitBoxWnd.h" />
+    <ClInclude Include="..\sakura_core\CSplitterWnd.h" />
+    <ClInclude Include="..\sakura_core\CTabWnd.h" />
+    <ClInclude Include="..\sakura_core\CTipWnd.h" />
+    <ClInclude Include="..\sakura_core\CUxTheme.h" />
+    <ClInclude Include="..\sakura_core\CWaitCursor.h" />
+    <ClInclude Include="..\sakura_core\CWnd.h" />
+    <ClInclude Include="..\sakura_core\CWSH.h" />
+    <ClInclude Include="..\sakura_core\CWSHManager.h" />
+    <ClInclude Include="..\sakura_core\Debug.h" />
+    <ClInclude Include="..\sakura_core\etc_uty.h" />
+    <ClInclude Include="..\sakura_core\Funccode.h" />
+    <ClInclude Include="..\sakura_core\global.h" />
+    <ClInclude Include="..\sakura_core\Keycode.h" />
+    <ClInclude Include="..\sakura_core\mymessage.h" />
+    <ClInclude Include="..\sakura_core\my_icmp.h" />
+    <ClInclude Include="..\sakura_core\MY_SP.h" />
+    <ClInclude Include="..\sakura_core\my_tchar.h" />
+    <ClInclude Include="..\sakura_core\OleTypes.h" />
+    <ClInclude Include="..\sakura_core\sakura.hh" />
+    <ClInclude Include="..\sakura_core\sakura_rc.h" />
+    <ClInclude Include="..\sakura_core\StdAfx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\resource\cursor_copy.cur" />
+    <None Include="..\resource\cursor_hand.cur" />
+    <None Include="..\resource\cursor_isb.cur" />
+    <None Include="..\resource\cursor_isf.cur" />
+    <None Include="..\resource\cursor_move.cur" />
+    <None Include="..\resource\cursor_rvarrow.cur" />
+    <None Include="..\resource\cursor_tab_join.cur" />
+    <None Include="..\resource\cursor_tab_left.cur" />
+    <None Include="..\resource\cursor_tab_right.cur" />
+    <None Include="..\resource\cursor_tab_separate.cur" />
+    <None Include="..\sakura_core\sakura_rc.hm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\resource\icon_debug.ico" />
+    <Image Include="..\resource\icon_grep.ico" />
+    <Image Include="..\resource\icon_hana.ico" />
+    <Image Include="..\resource\icon_moji.ico" />
+    <Image Include="..\resource\icon_std.ico" />
+    <Image Include="..\resource\mytool.bmp" />
+    <Image Include="..\resource\opened.bmp" />
+    <Image Include="..\resource\opened_this.bmp" />
+    <Image Include="..\resource\printer.bmp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
